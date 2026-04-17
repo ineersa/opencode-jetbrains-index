@@ -1,0 +1,13 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "lsp": false,
+  "plugin": ["file:///home/ineersa/claw/opencode-jetbrains-index"],
+  "mcp": {
+    "jetbrains-index": {
+      "type": "remote",
+      "url": "http://127.0.0.1:29175/index-mcp/streamable-http",
+      "headers": {},
+      "enabled": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json.schemastore.org/package.json",
+  "name": "@ineersa/opencode-jetbrains-index-plugin",
+  "version": "0.1.0",
+  "description": "OpenCode server plugin that enforces JetBrains IDE-index-first guardrails and diagnostics gating.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/server.js",
+  "types": "./dist/server.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/server.js",
+      "types": "./dist/server.d.ts"
+    },
+    "./server": {
+      "import": "./dist/server.js",
+      "types": "./dist/server.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc --noEmit -p tsconfig.json",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "opencode",
+    "plugin",
+    "jetbrains",
+    "mcp",
+    "diagnostics",
+    "guardrails"
+  ],
+  "engines": {
+    "node": ">=20",
+    "opencode": ">=1.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.2"
+  },
+  "devDependencies": {
+    "@opencode-ai/plugin": "^1.4.3",
+    "@types/node": "^22.13.10",
+    "typescript": "^5.8.3"
+  }
+}
